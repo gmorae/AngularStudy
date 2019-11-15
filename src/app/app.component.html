@@ -1,11 +1,27 @@
-<h1>{{title}}</h1>
-<table>
-  <tr>
-    <th>#</th>
-    <th>Nome</th>
-  </tr>
-  <tr *ngFor="let item of users | keyvalue" >
-    <td>{{item.key}}</td>
-    <td>{{item.value.name}}</td>
-  </tr>
-</table>
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row">
+    <div class="col-12 mt-5">
+      <div class="col-6">
+        <img class="banner" src="../assets/img/banner.svg" alt="">
+      </div>
+      <div class="col-6">
+        adasd
+      </div>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="container mt-5 mb-5">
+    <accordion [isAnimated]="true">
+      <accordion-group class="mb-2" *ngFor="let item of users | keyvalue" heading="{{item.value.name}}">
+        <p><span>Código : </span>{{item.value.code}}</p>
+        <p><span>Compra : </span>{{item.value.bid}}</p>
+        <p><span>Venda : </span>{{item.value.ask}}</p>
+        <p><span>Variação : </span>{{item.value.varBid}}</p>
+        <p><span>Porcentagem de variação : </span>{{item.value.pctChange}}</p>
+        <p><span>Data de atualização : </span>{{item.value.create_date | date:'dd/MM/yyyy H:m:s'}}</p>
+      </accordion-group>
+    </accordion>
+  </div>
+</main>

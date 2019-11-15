@@ -4,14 +4,21 @@ import { AppComponent } from './app.component'
 import { AppService } from "./app.service";
 import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule, HttpClient} from '@angular/common/http'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { NavbarComponent } from './components/navbar/navbar.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    AccordionModule.forRoot(),
   ],
   providers: [ AppService, HttpClient],
   bootstrap: [AppComponent]

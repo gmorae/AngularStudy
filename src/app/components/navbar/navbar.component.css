@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+nav a{
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+}
+
+.navbar-brand{
+    font-size: 2em;
+}
+
+.nav-link{
+    font-size: 1em;
+}
+
+span{
+    font-weight: bold;
+}
