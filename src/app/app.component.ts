@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from "./app.service";
-import { User } from './models/user.model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,7 +8,7 @@ import { User } from './models/user.model';
 export class AppComponent {
   title = 'FrontTeste';
 
-  users: User
+  users : any
   constructor(private app : AppService) {
     this.listar()
    }
@@ -17,12 +16,9 @@ export class AppComponent {
   ngOnInit() {}
 
   listar() {
-    this.app.listar().subscribe((res : User) => {
+    this.app.listar().subscribe(res => { 
       this.users = res
-      console.log('Variavel que preenchemos => ', this.users)
-      console.log('A nossa resposta =>', res)
-    }, err => {
-      console.error(err)
+      console.log(this.users)
     })
   }
 }

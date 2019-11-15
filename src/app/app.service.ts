@@ -7,7 +7,7 @@ import { User } from './models/user.model';
   providedIn: 'root'
 })
 export class AppService {
-  url = "https://economia.awesomeapi.com.br/json/usd"
+  url = "https://economia.awesomeapi.com.br/json/all"
   constructor( private http : HttpClient ) { }
 
   listar() : Observable<any> {
