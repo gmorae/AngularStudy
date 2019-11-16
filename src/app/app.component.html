@@ -1,16 +1,3 @@
 <app-navbar></app-navbar>
 <app-banner></app-banner>
-<main>
-  <div class="container mt-5 mb-5">
-    <accordion [isAnimated]="true">
-      <accordion-group class="mb-2" *ngFor="let item of users | keyvalue" heading="{{item.value.name}}">
-        <p><span>Código : </span>{{item.value.code}}</p>
-        <p><span>Compra : </span>{{item.value.bid}}</p>
-        <p><span>Venda : </span>{{item.value.ask}}</p>
-        <p><span>Variação : </span>{{item.value.varBid}}</p>
-        <p><span>Porcentagem de variação : </span>{{item.value.pctChange}}</p>
-        <p><span>Data de atualização : </span>{{item.value.create_date | date:'dd/MM/yyyy H:m:s'}}</p>
-      </accordion-group>
-    </accordion>
-  </div>
-</main>
+<app-main></app-main>

@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { AppService } from "./app.service";
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,18 +7,4 @@ import { AppService } from "./app.service";
 })
 export class AppComponent {
   title = 'FrontTeste';
-
-  users : any
-  constructor(private app : AppService) {
-    this.listar()
-   }
-
-  ngOnInit() {}
-
-  listar() {
-    this.app.listar().subscribe(res => { 
-      this.users = res
-      console.log(this.users)
-    })
-  }
 }
